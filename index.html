@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smidsy Technologies - The Best Program to Enroll for Exchange</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=64&id=cSTZGiTsAgJX&format=png"
+      type="image/svg+xml"
+    />
   </head>
-  <link
-    rel="shortcut icon"
-    href="https://img.icons8.com/?size=64&id=cSTZGiTsAgJX&format=png"
-    type="image/svg+xml"
-  />
   <body
     style="
       margin: 0;
@@ -97,6 +97,7 @@
               src="https://img.youtube.com/vi/H14bBuluwB8/maxresdefault.jpg"
               alt="YouTube Thumbnail"
               style="width: 100%; border-radius: 15px"
+              id="videoThumbnail"
             />
             <!-- Play Button -->
             <div
@@ -117,7 +118,7 @@
             </div>
           </div>
 
-          <!-- Video Embed (Initially hidden) -->
+          <!-- Video Embed -->
           <div
             id="videoContainer"
             style="display: none; margin-top: 15px; border-radius: 12px"
@@ -168,7 +169,7 @@
             width: 100%;
           "
         >
-          <!-- Row 1: Date & Time -->
+          <!-- Info Rows -->
           <div style="display: flex; gap: 15px; margin-bottom: 15px">
             <div
               style="
@@ -182,7 +183,7 @@
               <strong style="display: block; margin-bottom: 5px"
                 >📅 Date</strong
               >
-              <span style="font-size: 14px">27, 28, 29 March</span>
+              <span style="font-size: 14px">27, 28, 29 May</span>
             </div>
             <div
               style="
@@ -200,7 +201,6 @@
             </div>
           </div>
 
-          <!-- Row 2: Location & Language -->
           <div style="display: flex; gap: 15px; margin-bottom: 15px">
             <div
               style="
@@ -232,7 +232,6 @@
             </div>
           </div>
 
-          <!-- Host -->
           <div
             style="
               background: #1e1e1e;
@@ -247,10 +246,10 @@
             >
           </div>
 
-          <!-- Live Countdown -->
+          <!-- Countdown -->
           <div style="text-align: center; margin-top: 25px">
             <h3 style="font-size: 18px; margin-bottom: 10px">
-              LIVE Funnel Lab Starts In:
+              Smidsy Techilo LIVE Lab Starts In:
             </h3>
             <div
               id="countdown"
@@ -275,19 +274,21 @@
       </div>
     </div>
 
-    <!-- Countdown Script -->
+    <!-- Timer Script -->
     <script>
       const countdown = document.getElementById("countdown");
-      const endDate = new Date("March 29, 2025 19:00:00").getTime();
 
-      setInterval(() => {
-        const now = new Date().getTime();
-        const distance = endDate - now;
+      function updateCountdown() {
+        const now = new Date();
+        const target = new Date();
 
-        if (distance < 0) {
-          countdown.innerHTML = "00 : 00 : 00 : 00";
-          return;
+        // Set target to next 7:00PM
+        target.setHours(19, 0, 0, 0);
+        if (now >= target) {
+          target.setDate(target.getDate() + 1); // Move to next day
         }
+
+        const distance = target - now;
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
@@ -301,11 +302,14 @@
           .padStart(2, "0")} : ${minutes
           .toString()
           .padStart(2, "0")} : ${seconds.toString().padStart(2, "0")}`;
-      }, 1000);
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
 
       function playVideo() {
-        document.querySelector("img").style.display = "none"; // Hide thumbnail
-        document.querySelector("#videoContainer").style.display = "block"; // Show video
+        document.getElementById("videoThumbnail").style.display = "none";
+        document.getElementById("videoContainer").style.display = "block";
       }
     </script>
   </body>
