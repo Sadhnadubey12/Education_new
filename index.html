@@ -3,45 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smidsy Technologies - The Best Program to Enroll for Exchange</title>
-    <link
-      rel="shortcut icon"
-      href="https://img.icons8.com/?size=64&id=cSTZGiTsAgJX&format=png"
-      type="image/svg+xml"
-    />
+    <title>Smidsy Technologies</title>
   </head>
   <body
     style="
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: white;
+      background: linear-gradient(to bottom right, #ffffff, #eaf4fa, #e4f9f8);
+      color: navy;
     "
   >
     <div style="max-width: 1200px; margin: auto; padding: 30px 20px">
-      <!-- Heading -->
       <h1
         style="
           font-size: 32px;
           text-align: center;
           font-weight: bold;
-          margin: 0 0 10px;
-          line-height: 1.4;
+          margin-bottom: 10px;
+          background-color: blue;
         "
       >
-        <span>Empowering</span> Learning with
-        <span style="color: #f1c40f; font-weight: bold"
-          >Smidsy Technologies</span
-        >
+        <span>Step Into the Future of </span> Data with Microsoft
+        <span style="color: #dc143c">Fabric Data Engineering!!!</span>
       </h1>
-
       <p
         style="
           text-align: center;
-          color: #ccc;
+          color: navy;
           font-style: italic;
           font-size: 16px;
-          margin: 10px 0 30px;
+          margin-bottom: 30px;
         "
       >
         Discover cutting-edge programs and skill-based courses
@@ -50,24 +41,29 @@
         >
       </p>
 
-      <!-- Flex Section -->
+      <!-- Responsive container -->
       <div
         style="
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
-          gap: 30px;
-          align-items: flex-start;
+          gap: 20px;
+          justify-content: space-between;
         "
       >
-        <!-- Video Box -->
+        <!-- Left: Video Section -->
         <div
           style="
-            background: #1b1b1b;
+            flex: 1 1 350px;
+            min-width: 300px;
+            border: 5px solid navy;
             border-radius: 12px;
             padding: 15px;
-            max-width: 600px;
-            width: 100%;
+            background: linear-gradient(
+              to bottom right,
+              #bfc0d7,
+              #b9d7f5,
+              #b8f0f3
+            );
           "
         >
           <div
@@ -75,31 +71,20 @@
               background-color: #f39c12;
               color: black;
               font-weight: bold;
-              padding: 5px 12px;
+              padding: 6px 12px;
               border-radius: 8px;
               display: inline-block;
             "
           >
             🔊 Sound ON! Watch The Full Video!
           </div>
-
-          <!-- Video Thumbnail -->
-          <div
-            style="
-              position: relative;
-              width: 100%;
-              height: 100%;
-              border-radius: 15px;
-              margin-top: 15px;
-            "
-          >
+          <div style="position: relative; margin-top: 15px">
             <img
               src="https://img.youtube.com/vi/H14bBuluwB8/maxresdefault.jpg"
               alt="YouTube Thumbnail"
               style="width: 100%; border-radius: 15px"
               id="videoThumbnail"
             />
-            <!-- Play Button -->
             <div
               onclick="playVideo()"
               style="
@@ -112,13 +97,11 @@
             >
               <img
                 src="./assets/images/play.png"
-                alt="Play Button"
+                alt="Play"
                 style="width: 50px; height: 50px"
               />
             </div>
           </div>
-
-          <!-- Video Embed -->
           <div
             id="videoContainer"
             style="display: none; margin-top: 15px; border-radius: 12px"
@@ -128,12 +111,11 @@
               height="315"
               src="https://www.youtube.com/embed/H14bBuluwB8?autoplay=1"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; encrypted-media"
               allowfullscreen
               style="border-radius: 12px"
             ></iframe>
           </div>
-
           <div
             style="
               display: flex;
@@ -159,22 +141,37 @@
           </div>
         </div>
 
+        <!-- Right: Details Section -->
+
         <!-- Details Box -->
         <div
           style="
-            background: #111;
+            background: linear-gradient(
+              to bottom right,
+              #ffffff,
+              #eaf4fa,
+              #e4f9f8
+            );
+
             padding: 20px;
+            border: 5px solid navy;
             border-radius: 12px;
             max-width: 500px;
             width: 100%;
           "
         >
-          <!-- Info Rows -->
+          <!-- Row 1: Date & Time -->
           <div style="display: flex; gap: 15px; margin-bottom: 15px">
             <div
               style="
                 flex: 1;
-                background: #1e1e1e;
+                background: linear-gradient(
+                  to bottom right,
+                  #bfc0d7,
+                  #b9d7f5,
+                  #b8f0f3
+                );
+                border: 3px solid navy;
                 padding: 15px;
                 border-radius: 12px;
                 text-align: center;
@@ -183,12 +180,18 @@
               <strong style="display: block; margin-bottom: 5px"
                 >📅 Date</strong
               >
-              <span style="font-size: 14px">27, 28, 29 May</span>
+              <span style="font-size: 14px">27, 28, 29 March</span>
             </div>
             <div
               style="
                 flex: 1;
-                background: #1e1e1e;
+                background: linear-gradient(
+                  to bottom right,
+                  #bfc0d7,
+                  #b9d7f5,
+                  #b8f0f3
+                );
+                border: 3px solid navy;
                 padding: 15px;
                 border-radius: 12px;
                 text-align: center;
@@ -201,11 +204,18 @@
             </div>
           </div>
 
+          <!-- Row 2: Location & Language -->
           <div style="display: flex; gap: 15px; margin-bottom: 15px">
             <div
               style="
                 flex: 1;
-                background: #1e1e1e;
+                background: linear-gradient(
+                  to bottom right,
+                  #bfc0d7,
+                  #b9d7f5,
+                  #b8f0f3
+                );
+                border: 3px solid navy;
                 padding: 15px;
                 border-radius: 12px;
                 text-align: center;
@@ -219,7 +229,13 @@
             <div
               style="
                 flex: 1;
-                background: #1e1e1e;
+                background: linear-gradient(
+                  to bottom right,
+                  #bfc0d7,
+                  #b9d7f5,
+                  #b8f0f3
+                );
+                border: 3px solid navy;
                 padding: 15px;
                 border-radius: 12px;
                 text-align: center;
@@ -232,9 +248,16 @@
             </div>
           </div>
 
+          <!-- Host -->
           <div
             style="
-              background: #1e1e1e;
+              background: linear-gradient(
+                to bottom right,
+                #bfc0d7,
+                #b9d7f5,
+                #b8f0f3
+              );
+              border: 3px solid navy;
               padding: 15px;
               border-radius: 12px;
               text-align: center;
@@ -245,72 +268,63 @@
               ><b>Saif Shaikh</b> – Client Acquisition Specialist</span
             >
           </div>
+          <br />
+          <!-- Live Countdown -->
 
-          <!-- Countdown -->
-          <div style="text-align: center; margin-top: 25px">
-            <h3 style="font-size: 18px; margin-bottom: 10px">
-              Smidsy Techilo LIVE Lab Starts In:
-            </h3>
+          <div
+            style="
+              background: linear-gradient(
+                to bottom right,
+                #bfc0d7,
+                #b9d7f5,
+                #b8f0f3
+              );
+              border: 3px solid navy;
+              padding: 15px;
+              border-radius: 12px;
+              text-align: center;
+            "
+          >
+            <h3 style="font-size: 18px">LIVE Funnel Lab Starts In:</h3>
             <div
               id="countdown"
-              style="font-size: 26px; font-weight: bold; color: #f1c40f"
+              style="font-size: 26px; font-weight: bold; color: #dc143c"
             >
               00 : 00 : 00 : 00
-            </div>
-            <div
-              style="
-                display: flex;
-                justify-content: space-around;
-                font-size: 12px;
-                color: #aaa;
-                margin-top: 5px;
-              "
-            >
-              <span>DAYS</span><span>HOURS</span><span>MINUTES</span
-              ><span>SECONDS</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Timer Script -->
+    <!-- Video Script -->
     <script>
-      const countdown = document.getElementById("countdown");
+      function playVideo() {
+        document.getElementById("videoThumbnail").style.display = "none";
+        document.getElementById("videoContainer").style.display = "block";
+      }
 
+      const countdown = document.getElementById("countdown");
       function updateCountdown() {
         const now = new Date();
         const target = new Date();
-
-        // Set target to next 7:00PM
         target.setHours(19, 0, 0, 0);
-        if (now >= target) {
-          target.setDate(target.getDate() + 1); // Move to next day
-        }
-
+        if (now >= target) target.setDate(target.getDate() + 1);
         const distance = target - now;
-
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdown.innerHTML = `${days.toString().padStart(2, "0")} : ${hours
-          .toString()
-          .padStart(2, "0")} : ${minutes
-          .toString()
-          .padStart(2, "0")} : ${seconds.toString().padStart(2, "0")}`;
+        countdown.innerHTML = `${String(days).padStart(2, "0")} : ${String(
+          hours
+        ).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(
+          seconds
+        ).padStart(2, "0")}`;
       }
-
-      setInterval(updateCountdown, 1000);
       updateCountdown();
-
-      function playVideo() {
-        document.getElementById("videoThumbnail").style.display = "none";
-        document.getElementById("videoContainer").style.display = "block";
-      }
+      setInterval(updateCountdown, 1000);
     </script>
   </body>
 </html>
