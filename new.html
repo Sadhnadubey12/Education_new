@@ -2,79 +2,318 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Navbar Example</title>
-    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webinar Landing Page</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Timer responsiveness */
+      @media (max-width: 768px) {
+        #timer {
+          padding: 10px 30px; /* Reduced padding for mobile view */
+          font-size: 18px; /* Reduced font size for mobile view */
+          display: inline-flex; /* Make timer inline-flex for better alignment */
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .timer-section {
+          display: inline-block;
+          margin: 0 5px;
+        }
+
+        .timer-section span {
+          font-size: 18px;
+        }
+
+        #hours,
+        #minutes,
+        #seconds {
+          font-size: 24px;
+        }
+      }
+
+      /* Adjust text size and container for smaller screens */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .timer-container {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+
+      /* Adjusted the timer container to move it up */
+      .timer-container {
+        text-align: center;
+        margin-top: -30px; /* Reduced margin to move the timer section up */
+      }
+    </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+  <body
+    style="
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #010a43;
+      color: white;
+    "
+  >
+    <div
+      style="
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        animation: fadeInUp 1s ease-in-out;
+        padding-top: 0px;
+      "
+    >
+      <!-- Heading Center -->
+      <h1
+        style="
+          text-align: center;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 1.4;
+          color: white;
+          margin-top: 0;
+        "
+      >
+        Master Microsoft Fabric Data Engineering & get <br />
+        <span style="color: #fee401">DP-700 Certified in 120 Days.</span>
+      </h1>
+
+      <!-- New Subheadline with animation -->
+      <p
+        class="animate__animated animate__pulse"
+        style="
+          text-align: center;
+          font-size: 20px;
+          margin: 10px auto;
+          max-width: 900px;
+          line-height: 1.6;
+        "
+      >
+        Our proven
+        <span style="color: #00eaff; font-weight: 700">industry-ready</span>
+        roadmap takes you from beginner to
+
+        <span
+          id="highlightText"
+          class="animate__animated"
+          style="color: #ff5c93; font-weight: 900; font-size: 22px"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
+          certified Azure Fabric Data Engineer
+        </span>
+
+        with
+        <span style="color: #ffd700; font-weight: 700"
+          >step-by-step training</span
+        >, hands-on labs, coding assignments, mock interviews & real-world
+        projects.
+      </p>
+
+      <!-- Tick Line -->
+      <p style="text-align: center; font-size: 16px">
+        ✅ No More Guesswork | ✅ No More Fear | ✅ Only Profitable Trades!
+      </p>
+
+      <!-- Flex Layout for Video and Content -->
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 40px;
+        "
+      >
+        <!-- Video -->
+        <div style="flex: 1 1 450px; min-width: 300px">
+          <iframe
+            width="100%"
+            height="270"
+            src="https://www.youtube.com/embed/5p8e2ZkbOFU"
+            title="Code With Harry - YouTube video"
+            frameborder="0"
+            allowfullscreen
+            style="
+              border-radius: 12px;
+              box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            "
+          ></iframe>
+        </div>
+
+        <!-- Details -->
+        <div style="flex: 1 1 400px; min-width: 300px">
+          <!-- Grid Info -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 15px;
+              margin-bottom: 25px;
+            "
           >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Link</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">📅 Date</div>
+              <div style="margin-top: 5px">14th June 2025</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">⏰ Time</div>
+              <div style="margin-top: 5px">Sat-Sun: 7am to 10am</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">📍 Venue</div>
+              <div style="margin-top: 5px">Zoom</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">🗣️ Language</div>
+              <div style="margin-top: 5px">English</div>
+            </div>
+            <div
+              style="
+                grid-column: span 2;
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">🎙️ Host</div>
+              <div style="margin-top: 5px">
+                Saif Shaikh - Sr Consultant/Corporate Trainer
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centered Compact Timer -->
+        <div class="timer-container">
+          <div
+            id="timer"
+            style="
+              background-color: #00d77e;
+              color: white;
+              padding: 5px 30px;
+              border-radius: 14px;
+              font-size: 26px;
+              font-weight: 600;
+              animation: buttonGlow 1.5s infinite alternate;
+              box-shadow: 0 0 15px rgba(0, 215, 126, 0.5);
+              display: flex;
+              justify-content: center;
+              gap: 7px;
+            "
+          >
+            <div class="timer-section">
+              <span id="hours">00</span> <span>Hours</span>
+            </div>
+            <div class="timer-section">
+              <span id="minutes">00</span> <span>Minutes</span>
+            </div>
+            <div class="timer-section">
+              <span id="seconds">00</span> <span>Seconds</span>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Timer Script (Up to 72 Hours) -->
+    <script>
+      const startTime = new Date();
+
+      function updateClock() {
+        const now = new Date();
+        const diff = Math.floor((now - startTime) / 1000); // seconds since start
+
+        const totalSeconds = Math.min(diff, 72 * 3600); // cap at 72 hours
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds
+        ).padStart(2, "0");
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <!-- Animate loop script -->
+    <script>
+      const highlight = document.getElementById("highlightText");
+
+      function triggerAnimation() {
+        highlight.classList.remove("animate__tada");
+
+        // Force reflow to restart animation
+        void highlight.offsetWidth;
+
+        highlight.classList.add("animate__tada");
+      }
+
+      // First call
+      triggerAnimation();
+
+      // Repeat every 3 seconds
+      setInterval(triggerAnimation, 3000);
+    </script>
   </body>
 </html>

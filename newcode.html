@@ -3,339 +3,250 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smidsy Technologies</title>
+    <title>Webinar Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulseText {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes buttonGlow {
+        0% {
+          background-color: #00d77e;
+        }
+        50% {
+          background-color: #00d77e;
+        }
+        100% {
+          background-color: #00d77e;
+        }
+      }
+
+      .fade-in-text {
+        opacity: 0;
+        animation: fadeInUp 2s forwards;
+      }
+
+      .highlight-animation {
+        animation: pulseText 2s infinite;
+      }
+
+      .live-timer {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        background: #00d77e;
+        padding: 16px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      #liveTimer {
+        animation: buttonGlow 1s infinite alternate;
+      }
+    </style>
   </head>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    rel="stylesheet"
-  />
   <body
     style="
       margin: 0;
-      font-family: 'Times New Roman', Times, serif, 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #ffffff, #eaf4fa, #e4f9f8);
-      color: navy;
+      font-family: 'Segoe UI', sans-serif;
+      background: #010a43;
+      color: white;
     "
   >
-    <!-- Top Blue Heading -->
     <div
       style="
-        background-color: #007bff;
-        color: white;
-        padding: 20px 10px;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px 20px 10px 20px;
+        animation: fadeInUp 1s ease-in-out;
       "
     >
-      <i class="fas fa-graduation-cap" style="color: hsl(348, 72%, 36%)"></i>
-      Master Microsoft Fabric Data Engineering & get
-      <span>DP-700 Certified in 120 Days</span>
-    </div>
-
-    <div style="max-width: 1200px; margin: auto; padding: 30px 20px">
-      <p
+      <!-- Heading Center -->
+      <h1
         style="
           text-align: center;
-          color: navy;
-          font-style: italic;
-          font-size: 26px;
-          font-weight: bold;
-          margin-top: 25px;
-          margin-bottom: 45px;
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 1.3;
+          margin-bottom: 10px;
         "
       >
-        Our proven <span style="color: #a80d2c">industry-ready</span> roadmap
-        takes you from beginner to certified Azure Fabric Data Engineer with
-        step-by-step training,
-        <span style="color: #a80d2c">hands-on labs,</span>
-        coding assignments, mock interviews & real-world projects.
+        Master Microsoft Fabric Data Engineering & get <br />
+        <span style="color: #fee401; animation: pulseText 2s infinite"
+          >DP-700 Certified in 120 Days.</span
+        >
+      </h1>
+
+      <!-- Subheadline -->
+      <p
+        class="fade-in-text"
+        style="
+          text-align: center;
+          font-size: 22px;
+          margin: 10px auto 20px auto;
+          max-width: 900px;
+          line-height: 1.6;
+        "
+      >
+        Our proven
+        <span
+          style="
+            color: #00eaff;
+            font-weight: 700;
+            animation: pulseText 2s infinite;
+          "
+          >industry-ready</span
+        >
+        roadmap takes you from beginner to
+        <span
+          class="highlight-animation"
+          style="
+            color: #ff5c93;
+            font-weight: 900;
+            font-size: 24px;
+            animation: pulseText 2s infinite;
+          "
+          >certified Azure Fabric Data Engineer</span
+        >
+        with
+        <span
+          style="
+            color: #ffd700;
+            font-weight: 700;
+            animation: pulseText 2s infinite;
+          "
+          >step-by-step training</span
+        >, hands-on labs, coding assignments, mock interviews & real-world
+        projects.
       </p>
 
-      <!-- Responsive container -->
+      <!-- Tick Line -->
+      <p style="text-align: center; font-size: 16px">
+        ✅ No More Guesswork | ✅ No More Fear | ✅ Only Profitable Trades!
+      </p>
+
+      <!-- Flex Layout for Video and Content -->
       <div
         style="
           display: flex;
           flex-wrap: wrap;
-          gap: 20px;
-          justify-content: space-between;
+          gap: 30px;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 40px;
         "
       >
-        <!-- Video Section -->
-        <div
-          style="
-            flex: 1 1 350px;
-            min-width: 300px;
-            border: 5px solid navy;
-            border-radius: 12px;
-            padding: 15px;
-            background: linear-gradient(
-              to bottom right,
-              #bfc0d7,
-              #b9d7f5,
-              #b8f0f3
-            );
-          "
-        >
-          <div
+        <!-- Video -->
+        <div style="flex: 1 1 450px; min-width: 300px">
+          <iframe
+            width="100%"
+            height="270"
+            src="https://www.youtube.com/embed/5p8e2ZkbOFU"
+            title="Code With Harry - YouTube video"
+            frameborder="0"
+            allowfullscreen
             style="
-              background-color: navy;
-              color: white;
-              font-weight: bold;
-              padding: 6px 12px;
-              border-radius: 8px;
-              display: inline-block;
+              border-radius: 12px;
+              box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
             "
-          >
-            🔊 Sound ON! Watch The Full Video!
-          </div>
-          <div style="position: relative; margin-top: 15px">
-            <img
-              src="https://img.youtube.com/vi/H14bBuluwB8/maxresdefault.jpg"
-              alt="YouTube Thumbnail"
-              style="width: 100%; border-radius: 15px"
-              id="videoThumbnail"
-            />
-            <div
-              onclick="playVideo()"
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                cursor: pointer;
-              "
-            >
-              <img
-                src="./assets/images/play.png"
-                alt="Play"
-                style="width: 50px; height: 50px"
-              />
-            </div>
-          </div>
-          <div
-            id="videoContainer"
-            style="display: none; margin-top: 15px; border-radius: 12px"
-          >
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/H14bBuluwB8?autoplay=1"
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              style="border-radius: 12px"
-            ></iframe>
-          </div>
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              margin-top: 12px;
-            "
-          >
-            <img
-              src="./assets/images/r-sm1.png"
-              alt="Host"
-              style="
-                width: 85px;
-                height: 100px;
-                border-radius: 50%;
-                object-fit: cover;
-              "
-            />
-            <div style="text-align: right; font-size: 14px">
-              <!-- <div>1.2x</div>
-              <div>2 min 42 sec</div> -->
-            </div>
-          </div>
+          ></iframe>
         </div>
 
-        <!-- Details Section -->
-        <div
-          style="
-            background: linear-gradient(
-              to bottom right,
-              #ffffff,
-              #eaf4fa,
-              #e4f9f8
-            );
-            padding: 20px;
-            border: 5px solid navy;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 100%;
-          "
-        >
-          <div style="display: flex; gap: 15px; margin-bottom: 15px">
-            <div
-              style="
-                flex: 1;
-                background: linear-gradient(
-                  to bottom right,
-                  #bfc0d7,
-                  #b9d7f5,
-                  #b8f0f3
-                );
-                border: 3px solid navy;
-                padding: 15px;
-                border-radius: 12px;
-                text-align: center;
-              "
-            >
-              <strong style="display: block; margin-bottom: 5px"
-                >📅 Date</strong
-              >
-              <span style="font-size: 14px; font-weight: bold"
-                >14th June 2025
-              </span>
-            </div>
-            <div
-              style="
-                flex: 1;
-                background: linear-gradient(
-                  to bottom right,
-                  #bfc0d7,
-                  #b9d7f5,
-                  #b8f0f3
-                );
-                border: 3px solid navy;
-                padding: 15px;
-                border-radius: 12px;
-                text-align: center;
-              "
-            >
-              <strong style="display: block; margin-bottom: 5px"
-                >⏰ Time</strong
-              >
-              <span style="font-size: 14px; font-weight: bold"
-                >Sat-Sun: 7am to 10am
-              </span>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 15px; margin-bottom: 15px">
-            <div
-              style="
-                flex: 1;
-                background: linear-gradient(
-                  to bottom right,
-                  #bfc0d7,
-                  #b9d7f5,
-                  #b8f0f3
-                );
-                border: 3px solid navy;
-                padding: 15px;
-                border-radius: 12px;
-                text-align: center;
-              "
-            >
-              <strong style="display: block; margin-bottom: 5px"
-                >📍 Location</strong
-              >
-              <span style="font-size: 14px; font-weight: bold"
-                >Zoom Meeting</span
-              >
-            </div>
-            <div
-              style="
-                flex: 1;
-                background: linear-gradient(
-                  to bottom right,
-                  #bfc0d7,
-                  #b9d7f5,
-                  #b8f0f3
-                );
-                border: 3px solid navy;
-                padding: 15px;
-                border-radius: 12px;
-                text-align: center;
-              "
-            >
-              <strong style="display: block; margin-bottom: 5px"
-                >🈯 Language</strong
-              >
-              <span style="font-size: 14px; font-weight: bold"> English</span>
-            </div>
-          </div>
-
+        <!-- Details -->
+        <div style="flex: 1 1 400px; min-width: 300px">
+          <!-- Info Grid -->
           <div
             style="
-              background: linear-gradient(
-                to bottom right,
-                #bfc0d7,
-                #b9d7f5,
-                #b8f0f3
-              );
-              border: 3px solid navy;
-              padding: 15px;
-              border-radius: 12px;
-              text-align: center;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 15px;
+              margin-bottom: 25px;
             "
           >
-            <strong style="display: block; margin-bottom: 5px">👨‍💼 Host</strong>
-            <span style="font-size: 14px; font-weight: bold"
-              ><b>Saif Shaikh</b> – Sr Consultant/Corporate Trainer</span
-            >
-          </div>
-          <br />
-
-          <div
-            style="
-              background: linear-gradient(
-                to bottom right,
-                #bfc0d7,
-                #b9d7f5,
-                #b8f0f3
-              );
-              border: 3px solid navy;
-              padding: 15px;
-              border-radius: 12px;
-              text-align: center;
-            "
-          >
-            <h3 style="font-size: 18px">LIVE Lab Starts In:</h3>
             <div
-              id="countdown"
-              style="font-size: 26px; font-weight: bold; color: #dc143c"
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
             >
-              00 : 00 : 00 : 00
+              <div style="font-size: 16px; font-weight: 700">📅 Date</div>
+              <div style="margin-top: 5px">14th June 2025</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">⏰ Time</div>
+              <div style="margin-top: 5px">Sat-Sun: 7am to 10am</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">📍 Venue</div>
+              <div style="margin-top: 5px">Zoom</div>
+            </div>
+            <div
+              style="
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">🗣️ Language</div>
+              <div style="margin-top: 5px">English</div>
+            </div>
+            <div
+              style="
+                grid-column: span 2;
+                background: #0e1465;
+                padding: 15px;
+                border-radius: 12px;
+                text-align: center;
+              "
+            >
+              <div style="font-size: 16px; font-weight: 700">🎙️ Host</div>
+              <div style="margin-top: 5px">
+                Saif Shaikh - Sr Consultant/Corporate Trainer
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      function playVideo() {
-        document.getElementById("videoThumbnail").style.display = "none";
-        document.getElementById("videoContainer").style.display = "block";
-      }
-
-      const countdown = document.getElementById("countdown");
-      function updateCountdown() {
-        const now = new Date();
-        const target = new Date();
-        target.setHours(19, 0, 0, 0);
-        if (now >= target) target.setDate(target.getDate() + 1);
-        const distance = target - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        countdown.innerHTML = `${String(days).padStart(2, "0")} : ${String(
-          hours
-        ).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(
-          seconds
-        ).padStart(2, "0")}`;
-      }
-
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
-    </script>
   </body>
 </html>

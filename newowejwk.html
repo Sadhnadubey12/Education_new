@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webinar Landing Page</title>
-    <!-- Link to Animate.css for animation -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <style>
       @keyframes fadeInUp {
         from {
@@ -36,7 +37,7 @@
         margin: 0 auto;
         padding: 10px;
         animation: fadeInUp 1s ease-in-out;
-        padding-top: 0px;
+        padding-top: 0px; /* Reduced top padding */
       "
     >
       <!-- Heading Center -->
@@ -47,39 +48,34 @@
           font-weight: 700;
           line-height: 1.4;
           color: white;
-          margin-top: 0;
+          margin-top: 0; /* Removed top margin */
         "
       >
         Master Microsoft Fabric Data Engineering & get <br />
         <span style="color: #fee401">DP-700 Certified in 120 Days.</span>
       </h1>
 
-      <!-- New Subheadline with Animation -->
+      <!-- New Subheadline -->
       <p
         style="
           text-align: center;
           font-size: 20px;
-          margin: 10px auto;
+          margin: 10px auto; /* Reduced top margin */
           max-width: 900px;
           line-height: 1.6;
         "
       >
         Our proven
-        <span
-          class="animate__animated animate__heartBeat"
-          style="color: #00eaff; font-weight: 700"
-          >industry-ready</span
-        >
+        <span style="color: #00eaff; font-weight: 700">industry-ready</span>
         roadmap takes you from beginner to
         <span
           class="animate__animated animate__heartBeat"
           style="color: #ff5c93; font-weight: 900; font-size: 22px"
-          >certified Azure Fabric Data Engineer</span
         >
+          certified Azure Fabric Data Engineer
+        </span>
         with
-        <span
-          class="animate__animated animate__heartBeat"
-          style="color: #ffd700; font-weight: 700"
+        <span style="color: #ffd700; font-weight: 700"
           >step-by-step training</span
         >, hands-on labs, coding assignments, mock interviews & real-world
         projects.
@@ -201,10 +197,10 @@
             style="
               background-color: #00d77e;
               color: white;
-              padding: 6px 30px;
+              padding: 5px 90px;
               border-radius: 14px;
               font-size: 26px;
-              font-weight: 700;
+              font-weight: 600;
               animation: buttonGlow 1.5s infinite alternate;
               box-shadow: 0 0 15px rgba(0, 215, 126, 0.5);
               display: inline-block;
@@ -245,6 +241,14 @@
 
       setInterval(updateClock, 1000);
       updateClock();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const textElement = document.querySelector("span");
+        // Ensure the animation starts after the page has loaded
+        textElement.classList.add("animate__animated", "animate__heartBeat");
+      });
     </script>
   </body>
 </html>
