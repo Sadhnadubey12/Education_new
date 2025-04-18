@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Azure Fabric Data Engineer</title>
+    <style>
+      @media (max-width: 900px) {
+        .split-container {
+          flex-direction: column !important;
+        }
+
+        .half {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        .image-box img {
+          height: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #010a43;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <!-- Main Split Section -->
+    <div
+      class="split-container"
+      style="display: flex; width: 100%; height: 100%; flex-wrap: wrap"
+    >
+      <!-- Left Half: Image -->
+      <div
+        class="half image-box"
+        style="
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #010a43;
+        "
+      >
+        <img
+          src="./assets/images/WhatsApp_Image_2025-04-17_at_11.24.16_AM-removebg-preview (1).png"
+          alt="Roadmap"
+          style="
+            max-width: 90%;
+            height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+          "
+        />
+      </div>
+
+      <!-- Right Half: Form -->
+      <div
+        class="half"
+        style="
+          width: 50%;
+          height: 100%;
+          background: white;
+          color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div style="width: 90%; max-width: 500px">
+          <h2 style="text-align: center; color: #010a43; margin-bottom: 10px">
+            🎓 Reserve Your Spot
+          </h2>
+          <p
+            style="
+              text-align: center;
+              font-size: 14px;
+              margin-top: 0;
+              margin-bottom: 20px;
+            "
+          >
+            for the
+            <strong>90 Days Azure Fabric Data Engineering Webinar!</strong
+            ><br />
+            Get Instant Access to the Webinar Details in Your Inbox.<br />
+            <em
+              >Includes expert-led sessions, hands-on labs, and real-time
+              projects.</em
+            >
+          </p>
+
+          <form id="enrollForm">
+            <div style="margin-bottom: 15px">
+              <label for="name" style="font-weight: bold">Name</label>
+              <input
+                type="text"
+                id="name"
+                required
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 5px;
+                  border: 1px solid #ccc;
+                  font-size: 15px;
+                "
+              />
+            </div>
+            <div style="margin-bottom: 15px">
+              <label for="email" style="font-weight: bold">Email</label>
+              <input
+                type="email"
+                id="email"
+                required
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 5px;
+                  border: 1px solid #ccc;
+                  font-size: 15px;
+                "
+              />
+            </div>
+            <div style="margin-bottom: 15px">
+              <label for="whatsapp" style="font-weight: bold"
+                >WhatsApp No:</label
+              >
+              <input
+                type="tel"
+                id="whatsapp"
+                required
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 5px;
+                  border: 1px solid #ccc;
+                  font-size: 15px;
+                "
+              />
+            </div>
+            <button
+              type="submit"
+              style="
+                background: #010a43;
+                color: #fff;
+                border: none;
+                padding: 12px;
+                font-size: 16px;
+                border-radius: 5px;
+                width: 100%;
+                cursor: pointer;
+              "
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("enrollForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Form submitted successfully!");
+        });
+    </script>
+  </body>
+</html>

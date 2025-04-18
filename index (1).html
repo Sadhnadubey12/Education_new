@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Fabric Roadmap</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #010a43;
+        overflow-x: hidden;
+      }
+
+      .roadmap-container {
+        position: relative;
+        width: 100%;
+        height: 200vh;
+        background: #010a43;
+        overflow: hidden;
+      }
+
+      .road {
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px;
+        height: 1000px;
+        background: transparent;
+      }
+
+      .path {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 10;
+        stroke-dasharray: 20, 20;
+        marker-end: url(#arrow);
+        animation: draw 10s linear infinite;
+      }
+
+      @keyframes draw {
+        to {
+          stroke-dashoffset: -1000;
+        }
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+      }
+
+      .moving-arrow {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        animation: moveCar 12s linear infinite;
+        offset-path: path(
+          "M 50 100 C 300 150, 300 350, 500 400 C 700 450, 700 650, 900 700"
+        );
+        offset-rotate: auto;
+      }
+
+      .moving-arrow img {
+        width: 40px;
+        height: 40px;
+      }
+
+      @keyframes moveCar {
+        0% {
+          offset-distance: 0%;
+        }
+        100% {
+          offset-distance: 100%;
+        }
+      }
+
+      .svg-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="roadmap-container">
+      <div class="road">
+        <svg viewBox="0 0 1000 1000" class="svg-wrapper">
+          <defs>
+            <marker
+              id="arrow"
+              markerWidth="10"
+              markerHeight="10"
+              refX="6"
+              refY="3"
+              orient="auto"
+              markerUnits="strokeWidth"
+            >
+              <path d="M0,0 L0,6 L9,3 z" fill="#ffffff" />
+            </marker>
+          </defs>
+          <path
+            id="path"
+            d="M 50 100 C 300 150, 300 350, 500 400 C 700 450, 700 650, 900 700"
+            class="path"
+          />
+        </svg>
+
+        <!-- Moving arrow icon -->
+        <div class="moving-arrow">
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/right--v1.png"
+            alt="arrow"
+          />
+        </div>
+
+        <!-- Icons on the road -->
+        <div class="icon" style="top: 80px; left: 40px">
+          <img src="https://img.icons8.com/color/48/azure-1.png" width="30" />
+        </div>
+        <div class="icon" style="top: 160px; left: 150px">
+          <img src="https://img.icons8.com/color/48/graph.png" width="30" />
+        </div>
+        <div class="icon" style="top: 280px; left: 240px">
+          <img
+            src="https://img.icons8.com/color/48/data-configuration.png"
+            width="30"
+          />
+        </div>
+        <div class="icon" style="top: 400px; left: 370px">
+          <img
+            src="https://img.icons8.com/color/48/flow-chart.png"
+            width="30"
+          />
+        </div>
+        <div class="icon" style="top: 520px; left: 470px">
+          <img
+            src="https://img.icons8.com/color/48/microsoft-excel.png"
+            width="30"
+          />
+        </div>
+        <div class="icon" style="top: 640px; left: 600px">
+          <img src="https://img.icons8.com/color/48/sql.png" width="30" />
+        </div>
+        <div class="icon" style="top: 760px; left: 740px">
+          <img src="https://img.icons8.com/color/48/pyspark.png" width="30" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
